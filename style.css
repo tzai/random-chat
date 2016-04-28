@@ -1,0 +1,142 @@
+html, body {
+	font-family: : 'Montserrat', sans-serif;
+	padding-top: 20px;
+}
+
+h1 {
+	border-left: 2px solid #00f28f;
+	font-size: 48px;
+	font-weight: 400;
+	padding-left: 20px;
+}
+
+.main {
+	margin-top: 80px;
+}
+
+form input {
+	background: #f0f0f0;
+
+	border: none;
+	border-left: 2px solid #fff;
+
+	font-size: 36px;
+	padding: 20px;
+	width: 100%;
+
+	transition: background 2s, border-left 2s;
+}
+
+form input:focus {
+	background: #fff;
+	border-left: 2px solid #000;
+	box-shadow: none;
+	outline: none;
+}
+
+button.btn {
+	background: transparent;
+	border: none;
+
+	color: #00f28f;
+	cursor: pointer;
+
+	font-size: 36px;
+	padding: 20px 24px;
+
+	transition: background 1s, color 1s;
+	float: right;
+}
+
+button.btn:hover {
+	background: #00f28f;
+	color: #fff;
+}
+
+.chat-container {
+	position: relative;
+	overflow: hidden;
+}
+
+#chat {
+	margin-top: 20px;
+	list-style: none;
+	padding-left: 0px;
+	height: 68vh;
+	max-height: 945px;
+	bottom: 0;
+}
+
+#chat > li {
+	font-size: 3em;
+	margin: 0 0 36px;
+}
+
+#chat > li.local {
+	padding-left: 20px;
+	border-left: 2px solid #000;
+}
+
+#chat > li.remote {
+	padding-right: 20px;
+	border-right: 2px solid #000;
+	text-align: right;
+}
+
+.bottom-fade {
+	position: absolute;
+	float: bottom;
+	z-index: 9999;
+	bottom: 0;
+	width: 100%;
+	height: 25vh;
+	max-height: 240px;
+	
+	background: rgba(255,255,255,0);
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.89) 52%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(52%, rgba(255,255,255,0.89)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.89) 52%, rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.89) 52%, rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.89) 52%, rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.89) 52%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+    
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.main {
+		margin-top: 40px;
+	}
+	#chat {
+		max-height: 650px;
+	}
+	#chat > li {
+		font-size: 2em;
+		margin-bottom: 24px;
+	}
+	.bottom-fade {
+		max-height: 200px;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
