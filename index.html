@@ -9,30 +9,31 @@
 		<header class="header">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-12 col-md-12">
-						<h1>threadly</h1>
+					<div class="logo col-xs-12 col-md-12">
+						<h1>strangely</h1>
+						<h6>chat with a stranger</h2>
 					</div>
 				</div>
 			</div>
 		</header>
 
-		<div class="main">
+		<div id="status-msg" class="flicker"><h2>finding a stranger...</h2></div>
+
+		<div id="main">
 			<div class="container">
 				<div class="row">
 					<form class="form">
 						<div class="col-xs-8 col-md-10">
-							<input id="comment" type="text" placeholder="share your thoughts" autocomplete="off">
+							<input id="comment" type="text" placeholder="share a message" autocomplete="off">
 						</div>
 						<div class="col-xs-4 col-md-2">
-							<button type="submit" class="btn">post</button>
+							<button type="submit" class="btn">send</button>
 						</div>
 					</form>
 				</div>
 
 				<div class="chat-container">
 					<ul id="chat">
-						<li class="local">Have you felt it?</li>
-						<li class="local">There has been an awakening.</li>
 					</ul>
 					<div class="bottom-fade"></div>
 				</div>
@@ -41,6 +42,7 @@
 		</div>
 
 		<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+		<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
 		<script src="script.js"></script>
 	</body>
 </html>

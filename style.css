@@ -3,15 +3,36 @@ html, body {
 	padding-top: 20px;
 }
 
-h1 {
+.logo {
 	border-left: 2px solid #00f28f;
-	font-size: 48px;
+	margin-left: 15px;
 	font-weight: 400;
-	padding-left: 20px;
 }
 
-.main {
-	margin-top: 80px;
+h1 {
+	font-size: 48px;
+}
+
+h6 {
+	font-size: 28px;
+	color: #AAA;
+}
+
+@-webkit-keyframes flicker {
+	0% {opacity: 0.4;}
+	100% {opacity: 1;}
+}
+
+#status-msg {
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	-webkit-animation: flicker 1s alternate infinite;
+}
+
+#main {
+	margin-top: 25px;
+	display: none;
 }
 
 form input {
@@ -20,7 +41,7 @@ form input {
 	border: none;
 	border-left: 2px solid #fff;
 
-	font-size: 36px;
+	font-size: 34px;
 	padding: 20px;
 	width: 100%;
 
@@ -36,13 +57,14 @@ form input:focus {
 
 button.btn {
 	background: transparent;
-	border: none;
+	border: 2px solid #00f28f;
 
 	color: #00f28f;
 	cursor: pointer;
 
-	font-size: 36px;
+	font-size: 34px;
 	padding: 20px 24px;
+	width: 100%;
 
 	transition: background 1s, color 1s;
 	float: right;
@@ -122,8 +144,16 @@ button.btn:hover {
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
 	.main {
-		margin-top: 40px;
+		margin-top: 25px;
 	}
+	form input {
+		font-size: 28px;
+	}
+
+	button.btn {
+		font-size: 28px;
+	}
+
 	#chat {
 		max-height: 650px;
 	}
