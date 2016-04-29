@@ -18,7 +18,7 @@ var main = function() {
 			addItem(msg, false);
 		});
 
-		socket.on('peer lost', peerLost());
+		socket.on('peer lost', peerLost);
 
 		socket.on('disconnect', function() {
 			console.log('closing socket');
@@ -29,6 +29,7 @@ var main = function() {
 	}
 
 	function peerLost() {
+		console.log('peer lost');
 		$('#main').fadeOut(function () {
 			$('#status-msg').fadeIn();
 		});
@@ -38,7 +39,9 @@ var main = function() {
 	$('form').submit(function(event) {
 		var $input = $(event.target).find('input');
 		var comment = $input.val();
-		socket.emit('message', comment);
+		if(comment != "") {
+			socket.emit('message', comment);
+		}
 
 		addItem(comment, true);
 		$input.val("");
