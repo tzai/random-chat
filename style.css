@@ -23,11 +23,35 @@ h6 {
 	100% {opacity: 1;}
 }
 
+@-moz-keyframes flicker {
+	0% {opacity: 0.4;}
+	100% {opacity: 1;}
+}
+
+@-o-keyframes flicker {
+	0% {opacity: 0.4;}
+	100% {opacity: 1;}
+}
+
+@-ms-keyframes flicker {
+	0% {opacity: 0.4;}
+	100% {opacity: 1;}
+}
+
+@keyframes flicker {
+	0% {opacity: 0.4;}
+	100% {opacity: 1;}
+}
+
 #status-msg {
 	width: 50%;
 	margin: 0 auto;
 	text-align: center;
 	-webkit-animation: flicker 1s alternate infinite;
+	-moz-animation: flicker 1s alternate infinite;
+	animation: flicker 1s alternate infinite;
+	-o-animation: flicker 1s alternate infinite;
+	-ms-animation: flicker 1s alternate infinite;
 }
 
 #main {
@@ -46,6 +70,10 @@ form input {
 	width: 100%;
 
 	transition: background 2s, border-left 2s;
+	-webkit-transition: background 2s, border-left 2s;
+	-moz-transition: background 2s, border-left 2s;
+	-o-transition: background 2s, border-left 2s;
+	-ms-transition: background 2s, border-left 2s;
 }
 
 form input:focus {
@@ -67,6 +95,10 @@ button.btn {
 	width: 100%;
 
 	transition: background 1s, color 1s;
+	-webkit-transition: background 1s, color 1s;
+	-moz-transition: background 1s, color 1s;
+	-o-transition: background 1s, color 1s;
+	-ms-transition: background 1s, color 1s;
 	float: right;
 }
 
